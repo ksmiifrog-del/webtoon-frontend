@@ -14,27 +14,27 @@ export default function Footer() {
               <LogoSmall />
             </Link>
             <p className="mt-2 text-[12px] leading-relaxed text-wt-text-muted max-w-xs">
-              매일 새로운 웹툰을 만나보세요
+              Өдөр бүр шинэ вебтүүнтэй танилцаарай
             </p>
           </div>
 
           {/* Links */}
           <div className="flex gap-10">
             <div>
-              <h3 className="text-[12px] font-bold text-wt-text-secondary mb-3">서비스</h3>
+              <h3 className="text-[12px] font-bold text-wt-text-secondary mb-3">Үйлчилгээ</h3>
               <ul className="space-y-2">
-                <FooterLink href="/" label="요일연재" />
-                <FooterLink href="/completed" label="완결" />
-                <FooterLink href="/popular" label="인기" />
+                <FooterLink href="/" label="Өдөр тутмын" />
+                <FooterLink href="/completed" label="Дууссан" />
+                <FooterLink href="/popular" label="Тренд" />
               </ul>
             </div>
             <div>
               <h3 className="text-[12px] font-bold text-wt-text-secondary mb-3">고객지원</h3>
               <ul className="space-y-2">
-                <FooterLink href="/notice" label="공지사항" />
-                <FooterLink href="/faq" label="자주묻는질문" />
-                <FooterLink href="/terms" label="이용약관" />
-                <FooterLink href="/privacy" label="개인정보처리방침" />
+                <FooterLink href="/notice" label="Мэдэгдэл" />
+                <FooterLink href="/faq" label="Түгээмэл асуулт" />
+                <FooterLink href="/terms" label="Үйлчилгээний нөхцөл" />
+                <FooterLink href="/privacy" label="Нууцлалын бодлого" />
               </ul>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-8 pt-5 border-t border-wt-border">
           <p className="text-[11px] text-wt-text-muted">
-            &copy; 2026 KYUNGWON TOON. All rights reserved.
+            &copy; 2026 Moonveil Atelier. All rights reserved.
           </p>
         </div>
       </div>
