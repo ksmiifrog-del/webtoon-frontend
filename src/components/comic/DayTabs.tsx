@@ -3,7 +3,7 @@
 import type { DayOfWeek } from "@/types";
 import { DAY_LABELS } from "@/lib/format";
 
-const DAYS: DayOfWeek[] = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+const DAYS: DayOfWeek[] = ["Даваа", "Мягмар", "Лхагва", "Пүрэв", "Баасан", "Бямба", "Ням"];
 
 interface Props {
   selected: DayOfWeek | "ALL";
