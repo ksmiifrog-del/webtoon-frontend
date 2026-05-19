@@ -5,8 +5,8 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import { ToastProvider } from "@/components/common/Toast";
 
 export const metadata: Metadata = {
-  title: "KTOON",
-  description: "이야기에 빠져드는 가장 깊은 공간",
+  title: "Moonveil",
+  description: "Сарны гэрэл дор анхны хуудас нээгдлээ.",
 };
 
 export default function RootLayout({
