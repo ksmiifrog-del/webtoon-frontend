@@ -22,7 +22,7 @@ export default function LoginPage() {
       await login(email, password);
       router.push("/");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "로그인에 실패했습니다.");
+      setError(err instanceof Error ? err.message : "Нэвтрэхэд алдаа гарлаа.");
     } finally {
       setLoading(false);
     }
@@ -34,12 +34,12 @@ export default function LoginPage() {
         <div className="rounded-2xl bg-wt-bg-card p-7 border border-wt-border">
           <div className="text-center mb-7">
             <div className="mb-2"><LogoLarge /></div>
-            <p className="text-[13px] text-wt-text-muted">로그인하고 웹툰을 즐기세요</p>
+            <p className="text-[13px] text-wt-text-muted">Нэвтэрч орон вэбтүүнээ уншаарай</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-3">
             <div>
-              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">이메일</label>
+              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">И-мэйл</label>
               <input
                 type="email"
                 placeholder="example@email.com"
@@ -50,10 +50,10 @@ export default function LoginPage() {
               />
             </div>
             <div>
-              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">비밀번호</label>
+              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">Нууц үг</label>
               <input
                 type="password"
-                placeholder="비밀번호를 입력하세요"
+                placeholder="Нууц үгээ оруулна уу"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full rounded-lg border border-wt-border bg-wt-bg-elevated px-3.5 py-2.5 text-[13px] text-wt-text placeholder-wt-text-muted outline-none transition-colors focus:border-wt-primary/50 focus:ring-1 focus:ring-wt-primary/20"
@@ -75,22 +75,22 @@ export default function LoginPage() {
                   <div className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
                 </span>
               ) : (
-                "로그인"
+                "Нэвтрэх"
               )}
             </button>
           </form>
         </div>
 
         <p className="mt-5 text-center text-[13px] text-wt-text-muted">
-          계정이 없으신가요?{" "}
+          Бүртгэлгүй юу?{" "}
           <Link href="/signup" className="font-bold text-wt-primary hover:underline">
-            회원가입
+            Бүртгүүлэх
           </Link>
         </p>
 
         <div className="mt-3 rounded-lg bg-wt-bg-card px-3 py-2.5 text-center border border-wt-border">
           <p className="text-[11px] text-wt-text-muted">
-            테스트:{" "}
+            Тест:{" "}
             <span className="text-wt-text-secondary">user1@test.com</span>
             {" / "}
             <span className="text-wt-text-secondary">test1234</span>
