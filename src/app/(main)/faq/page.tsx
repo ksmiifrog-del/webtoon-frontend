@@ -102,11 +102,11 @@ const FAQ_ITEMS: FaqItem[] = [
 ];
 
 export default function FaqPage() {
-  const [activeCategory, setActiveCategory] = useState<Category>("전체");
+  const [activeCategory, setActiveCategory] = useState<Category>("Бүгд");
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const filtered =
-    activeCategory === "전체"
+    activeCategory === "Бүгд"
       ? FAQ_ITEMS
       : FAQ_ITEMS.filter((item) => item.category === activeCategory);
 
