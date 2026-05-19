@@ -71,11 +71,11 @@ export default function NoticePage() {
             <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            홈으로
+            Нүүр
           </Link>
-          <h1 className="text-2xl font-black text-wt-text sm:text-3xl">공지사항</h1>
+          <h1 className="text-2xl font-black text-wt-text sm:text-3xl">Мэдэгдэл</h1>
           <p className="mt-2 text-sm text-wt-text-secondary">
-            KYUNGWON TOON의 새로운 소식을 확인하세요
+            Шинэ мэдээ мэдээллээ эндээс үзээрэй
           </p>
         </div>
       </div>
@@ -86,7 +86,7 @@ export default function NoticePage() {
           <SkeletonList />
         ) : !notices || notices.length === 0 ? (
           <div className="overflow-hidden rounded-xl bg-wt-bg-card shadow-sm border border-wt-border px-5 py-16 text-center">
-            <p className="text-sm text-wt-text-muted">등록된 공지사항이 없습니다.</p>
+            <p className="text-sm text-wt-text-muted">Одоогоор мэдэгдэл алга.</p>
           </div>
         ) : (
           <div className="overflow-hidden rounded-xl bg-wt-bg-card shadow-sm border border-wt-border">
@@ -99,7 +99,7 @@ export default function NoticePage() {
                 >
                   {notice.isImportant && (
                     <span className="shrink-0 rounded bg-wt-primary/10 px-2 py-0.5 text-[11px] font-bold text-wt-primary">
-                      중요
+                      Чухал
                     </span>
                   )}
                   <span className="flex-1 text-sm font-medium text-wt-text sm:text-[15px]">
