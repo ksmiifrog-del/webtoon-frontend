@@ -15,9 +15,9 @@ export default function EventsPage() {
       {/* Page header */}
       <div className="bg-wt-bg-card border-b border-wt-border">
         <div className="mx-auto max-w-6xl px-4 py-10">
-          <h1 className="text-2xl font-black text-wt-text">이벤트</h1>
+          <h1 className="text-2xl font-black text-wt-text">Эвент</h1>
           <p className="mt-2 text-sm text-wt-text-secondary">
-            진행 중인 이벤트를 확인하세요
+            Одоогийн эвентүүдийг үзээрэй
           </p>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function EventsPage() {
               />
             </svg>
             <p className="text-wt-text-secondary text-sm">
-              현재 진행 중인 이벤트가 없습니다.
+              Одоогоор эвент байхгүй байна.
             </p>
           </div>
         ) : (
@@ -92,7 +92,7 @@ export default function EventsPage() {
                     {formatDate(event.startDate)} ~ {formatDate(event.endDate)}
                   </p>
                   <div className="mt-5 inline-block rounded-full bg-wt-primary/80 px-5 py-2 text-xs font-bold text-white backdrop-blur-sm transition-colors group-hover:bg-wt-primary sm:text-sm">
-                    자세히 보기 →
+                    Дэлгэрэнгүй →
                   </div>
                 </div>
               </a>
