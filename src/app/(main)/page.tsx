@@ -15,8 +15,8 @@ import { EmptyState, ErrorState } from "@/components/common/StateView";
 
 const DEFAULT_BANNER = {
   id: 0,
-  title: "KYUNGWON TOON",
-  description: "다양한 장르의 웹툰을 무료로 즐기세요",
+  title: "Moonveil Atelier",
+  description: "Мартагдах учиргүй түүхүүдийн эхлэлд тавтай морил.",
   bgColor: "#1a1a2e",
   linkUrl: "/",
 };
