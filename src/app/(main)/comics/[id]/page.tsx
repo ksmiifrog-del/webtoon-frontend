@@ -95,7 +95,7 @@ export default function ComicDetailPage() {
   if (comicError) {
     return (
       <div className="min-h-screen bg-wt-bg">
-        <ErrorState message="작품 정보를 불러오지 못했습니다" onRetry={() => comicRefetch()} />
+        <ErrorState message="Вэбтүүн мэдээлэл ачааллаж чадсангүй" onRetry={() => comicRefetch()} />
       </div>
     );
   }
@@ -139,7 +139,7 @@ export default function ComicDetailPage() {
                     ? "bg-wt-primary/15 text-wt-primary"
                     : "bg-wt-accent-red/15 text-wt-accent-red"
                 }`}>
-                  {comic.status === "ONGOING" ? "연재중" : "완결"}
+                  {comic.status === "ONGOING" ? "Гарч байгаа" : "Дууссан"}
                 </span>
                 {comic.days.map((d) => (
                   <span key={d} className="rounded-md bg-wt-bg-elevated px-2 py-0.5 text-[11px] text-wt-text-secondary">
@@ -161,9 +161,9 @@ export default function ComicDetailPage() {
                   {comic.averageRating > 0 ? comic.averageRating.toFixed(1) : "-"}
                 </span>
                 <span className="text-wt-text-muted">|</span>
-                <span className="text-wt-text-secondary">{formatViewCount(comic.viewCount)} 조회</span>
+                <span className="text-wt-text-secondary">{formatViewCount(comic.viewCount)} үзэлт</span>
                 <span className="text-wt-text-muted">|</span>
-                <span className="text-wt-success text-[11px] font-medium">{comic.freeEpisodeCount}화 무료</span>
+                <span className="text-wt-success text-[11px] font-medium">{comic.freeEpisodeCount}анги үнэгүй</span>
               </div>
 
               {comic.description && (
@@ -176,7 +176,7 @@ export default function ComicDetailPage() {
                       onClick={() => setShowFullDesc(!showFullDesc)}
                       className="mt-1 text-[11px] text-wt-text-muted hover:text-wt-text-secondary transition-colors"
                     >
-                      {showFullDesc ? "접기" : "더보기"}
+                      {showFullDesc ? "Хураах":"Дэлгэрэнгүй"}
                     </button>
                   )}
                 </div>
@@ -193,21 +193,21 @@ export default function ComicDetailPage() {
                     <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                     </svg>
-                    {readProgress.lastEpisodeNumber}화 이어보기
+                    {readProgress.lastEpisodeNumber}анги үргэлжлүүлэх
                   </Link>
                 ) : firstEpisode ? (
                   <button
                     onClick={() => handleEpisodeClick(firstEpisode)}
                     className="rounded-lg bg-wt-primary px-6 py-2.5 text-[13px] font-bold text-white transition-all hover:bg-wt-primary-dark active:scale-[0.97]"
                   >
-                    첫화 보기
+                    Эхний анги үзэх
                   </button>
                 ) : null}
                 <Link
                   href="/"
                   className="rounded-lg border border-wt-border-light px-6 py-2.5 text-[13px] font-medium text-wt-text-secondary transition-colors hover:bg-wt-bg-hover hover:text-wt-text"
                 >
-                  목록
+                  Жагсаалт
                 </Link>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function ComicDetailPage() {
       <div className="mx-auto max-w-5xl px-4 py-5">
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-[14px] font-bold text-wt-text">
-            에피소드
+            Анги
             <span className="ml-1.5 text-[12px] font-normal text-wt-text-muted">{episodes.length}화</span>
           </h2>
           <button
@@ -229,12 +229,12 @@ export default function ComicDetailPage() {
             <svg className={`h-3.5 w-3.5 transition-transform ${sortAsc ? "" : "rotate-180"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
             </svg>
-            {sortAsc ? "1화부터" : "최신화부터"}
+            {sortAsc ? "1-р ангиас" : "Шинэ ангиас"}
           </button>
         </div>
 
         {epError ? (
-          <ErrorState message="에피소드 목록을 불러오지 못했습니다" onRetry={() => epRefetch()} />
+          <ErrorState message="Ангиудыг ачааллаж чадсангүй" onRetry={() => epRefetch()} />
         ) : (
           <div className="rounded-xl bg-wt-bg-card border border-wt-border overflow-hidden">
             {sortedEpisodes.map((ep) => (
@@ -271,7 +271,7 @@ export default function ComicDetailPage() {
 
                 <div className="shrink-0">
                   {ep.free ? (
-                    <span className="text-[11px] font-bold text-wt-success">무료</span>
+                    <span className="text-[11px] font-bold text-wt-success">Үнэгүй</span>
                   ) : ep.purchased ? (
                     <svg className="h-4 w-4 text-wt-text-muted" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -290,7 +290,7 @@ export default function ComicDetailPage() {
 
             {episodes.length === 0 && (
               <div className="py-12 text-center text-[13px] text-wt-text-muted">
-                아직 등록된 에피소드가 없습니다
+                Одоогоор анги нэмэгдээгүй байна
               </div>
             )}
           </div>
