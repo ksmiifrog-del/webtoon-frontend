@@ -29,7 +29,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-[12px] font-bold text-wt-text-secondary mb-3">고객지원</h3>
+              <h3 className="text-[12px] font-bold text-wt-text-secondary mb-3">Тусламж</h3>
               <ul className="space-y-2">
                 <FooterLink href="/notice" label="Мэдэгдэл" />
                 <FooterLink href="/faq" label="Түгээмэл асуулт" />
