@@ -16,7 +16,7 @@ export default function PopularPage() {
       <div className="border-b border-wt-border">
         <div className="mx-auto max-w-5xl px-4 py-5">
           <div className="flex items-center justify-between">
-            <h1 className="text-lg font-black text-wt-text">인기 웹툰</h1>
+            <h1 className="text-lg font-black text-wt-text">Тренд Вэбтүүн</h1>
             <div className="flex rounded-lg bg-wt-bg-elevated p-0.5">
               {(["DAILY", "WEEKLY"] as RankingPeriod[]).map((p) => (
                 <button
@@ -28,7 +28,7 @@ export default function PopularPage() {
                       : "text-wt-text-muted hover:text-wt-text"
                   }`}
                 >
-                  {p === "DAILY" ? "일간" : "주간"}
+                  {p === "DAILY" ? "Өдөр" : "7 хоног"}
                 </button>
               ))}
             </div>
@@ -51,9 +51,9 @@ export default function PopularPage() {
             ))}
           </div>
         ) : isError ? (
-          <ErrorState message="랭킹을 불러오지 못했습니다" onRetry={() => refetch()} />
+          <ErrorState message="Ранк ачааллаж чадсангүй" onRetry={() => refetch()} />
         ) : rankings.length === 0 ? (
-          <EmptyState message="랭킹 데이터가 없습니다" />
+          <EmptyState message="Ранк мэдээлэл алга" />
         ) : (
           <div className="space-y-1">
             {rankings.map((item, idx) => (
