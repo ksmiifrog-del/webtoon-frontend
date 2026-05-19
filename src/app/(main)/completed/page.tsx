@@ -12,8 +12,8 @@ export default function CompletedPage() {
     <div className="min-h-screen bg-wt-bg">
       <div className="border-b border-wt-border">
         <div className="mx-auto max-w-5xl px-4 py-5">
-          <h1 className="text-lg font-black text-wt-text">완결 웹툰</h1>
-          <p className="mt-0.5 text-[12px] text-wt-text-muted">완결된 명작을 한번에</p>
+          <h1 className="text-lg font-black text-wt-text">Дууссан Вэбтүүн</h1>
+          <p className="mt-0.5 text-[12px] text-wt-text-muted">Дууссан шилдэг вэбтүүнүүд</p>
         </div>
       </div>
 
@@ -29,9 +29,9 @@ export default function CompletedPage() {
             ))}
           </div>
         ) : isError ? (
-          <ErrorState message="완결 웹툰을 불러오지 못했습니다" onRetry={() => refetch()} />
+          <ErrorState message="Дууссан вэбтүүнүүдийг ачааллаж чадсангүй" onRetry={() => refetch()} />
         ) : comics.length === 0 ? (
-          <EmptyState message="완결된 웹툰이 없습니다" />
+          <EmptyState message="Дууссан вэбтүүн алга" />
         ) : (
           <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
             {comics.map((comic) => (
