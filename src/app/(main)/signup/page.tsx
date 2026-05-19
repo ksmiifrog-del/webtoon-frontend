@@ -23,7 +23,7 @@ export default function SignupPage() {
       await signup(email, password, nickname);
       router.push("/login");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "회원가입에 실패했습니다.");
+      setError(err instanceof Error ? err.message : "Бүртгэл амжилтгүй боллоо.");
     } finally {
       setLoading(false);
     }
@@ -35,12 +35,12 @@ export default function SignupPage() {
         <div className="rounded-2xl bg-wt-bg-card p-7 border border-wt-border">
           <div className="text-center mb-7">
             <div className="mb-2"><LogoLarge /></div>
-            <p className="text-[13px] text-wt-text-muted">회원가입하고 웹툰을 시작하세요</p>
+            <p className="text-[13px] text-wt-text-muted">Бүртгүүлээд вебтүүнээ үзэж эхлээрэй</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-3">
             <div>
-              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">이메일</label>
+              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">И-мэйл</label>
               <input
                 type="email"
                 placeholder="example@email.com"
@@ -51,10 +51,10 @@ export default function SignupPage() {
               />
             </div>
             <div>
-              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">닉네임</label>
+              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">Хоч нэр</label>
               <input
                 type="text"
-                placeholder="2~30자"
+                placeholder="2~30 тэмдэгт"
                 value={nickname}
                 onChange={(e) => setNickname(e.target.value)}
                 className="w-full rounded-lg border border-wt-border bg-wt-bg-elevated px-3.5 py-2.5 text-[13px] text-wt-text placeholder-wt-text-muted outline-none transition-colors focus:border-wt-primary/50 focus:ring-1 focus:ring-wt-primary/20"
@@ -62,10 +62,10 @@ export default function SignupPage() {
               />
             </div>
             <div>
-              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">비밀번호</label>
+              <label className="block text-[11px] font-medium text-wt-text-muted mb-1">Нууц үг</label>
               <input
                 type="password"
-                placeholder="8~20자"
+                placeholder="8~20 тэмдэгт"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full rounded-lg border border-wt-border bg-wt-bg-elevated px-3.5 py-2.5 text-[13px] text-wt-text placeholder-wt-text-muted outline-none transition-colors focus:border-wt-primary/50 focus:ring-1 focus:ring-wt-primary/20"
@@ -87,16 +87,16 @@ export default function SignupPage() {
                   <div className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
                 </span>
               ) : (
-                "가입하기"
+                "Бүртгүүлэх"
               )}
             </button>
           </form>
         </div>
 
         <p className="mt-5 text-center text-[13px] text-wt-text-muted">
-          이미 계정이 있으신가요?{" "}
+          Аль хэдийн бүртгэлтэй юу?{" "}
           <Link href="/login" className="font-bold text-wt-primary hover:underline">
-            로그인
+            Нэвтрэх
           </Link>
         </p>
       </div>
