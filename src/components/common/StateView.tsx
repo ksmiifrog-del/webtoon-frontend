@@ -2,7 +2,7 @@
 
 /** 빈 데이터 상태 */
 export function EmptyState({
-  message = "데이터가 없습니다",
+  message = "Мэдээлэл алга байна",
   icon,
 }: {
   message?: string;
@@ -24,7 +24,7 @@ export function EmptyState({
 
 /** 에러 상태 (데이터 로드 실패) */
 export function ErrorState({
-  message = "데이터를 불러오지 못했습니다",
+  message = "Мэдээллийг ачаалж чадсангүй",
   onRetry,
 }: {
   message?: string;
